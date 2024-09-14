@@ -11,17 +11,17 @@ class CountIncrementer extends StatefulWidget {
 }
 
 class _CountIncrementer extends State<CountIncrementer> {
-  var initNumber = 0;
+  var counter = 0;
 
   void increment() {
     setState(() {
-      initNumber++;
+      counter++;
     });
   }
 
   void reset() {
     setState(() {
-      initNumber = 0;
+      counter = 0;
     });
   }
 
@@ -31,12 +31,15 @@ class _CountIncrementer extends State<CountIncrementer> {
       home: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            "Current Count: $initNumber",
-            style: GoogleFonts.lato(
-              color: Colors.white,
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
+          DefaultTextStyle(
+            style: const TextStyle(), //removes yellow lines
+            child: Text(
+              "Current Count: $counter",
+              style: GoogleFonts.lato(
+                color: Colors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           const SizedBox(

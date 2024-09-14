@@ -6,7 +6,9 @@ void main() {
     const MaterialApp(
       home: Scaffold(
         body: Styles(
-            Color.fromRGBO(143, 264, 198, 1), Color.fromRGBO(84, 116, 207, 1)),
+          Color.fromRGBO(230, 214, 236, 1),
+          Color.fromRGBO(230, 214, 236, 1),
+        ),
       ),
     ),
   );
